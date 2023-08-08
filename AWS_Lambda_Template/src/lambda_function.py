@@ -8,7 +8,7 @@ import singlestoredb as s2
 # List the variables
 limit = int(os.getenv('LIMIT', '10')) # Set a limit on how many rows you want to read and write back
 source_table = os.environ.get('SOURCE_TABLE', 'reviews_yelp') # Set which source table you want to read data from
-source_table_PK= os.environ.get('SOURC_TABLE_PK', 'review_id') # Set which column in the source table is the primary key
+source_table_PK= os.environ.get('SOURCE_TABLE_PK', 'review_id') # Set which column in the source table is the primary key
 source_table_text_column = os.environ.get('SOURCE_TABLE_TEXT_COLUMN', 'text') # Set which column in the source table contains the text that you want to embed
 destination_table = os.environ.get('DESTINATION_TABLE', 'reviews_yelp_embedding') # Set which destination table you will write data into - if that table doesn;t exist, we create it in the script
 db_endpoint = os.environ.get('ENDPOINT', '') # Set the host string to SingleStoreDB. It should look like svc-XXXX.svc.singlestore.com
