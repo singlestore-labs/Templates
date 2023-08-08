@@ -41,8 +41,6 @@ def handler(event, context):
     fetch_cur.execute(query_create_table)
     
     # Select rows with text that has no embeddings
-    query_insert = 'INSERT INTO {} SELECT * FROM yelp.reviews_all_v2 ra where ra.{} NOT IN (select {} from {}) LIMIT %s'.format(source_table,source_table_PK,source_table_PK, source_table)
-    fetch_cur.execute(query_insert, (limit,))
     query_read = 'select {}, {} from {} where {} NOT IN (select {} from {}) limit %s'.format(source_table_PK,source_table_text_column, source_table,source_table_PK,source_table_PK, destination_table)
     fetch_cur.execute(query_read, (limit,))
     
