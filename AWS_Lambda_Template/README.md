@@ -127,7 +127,7 @@ Now go to the Configuration and do the following:
       <td>Your own entry</td>
     </tr>
     <tr>
-      <td><strong>SOURC_TABLE_PK</strong></td>
+      <td><strong>SOURCE_TABLE_PK</strong></td>
       <td>Your own entry</td>
     </tr>
     <tr>
